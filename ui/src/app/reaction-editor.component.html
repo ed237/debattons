@@ -1,5 +1,6 @@
 <form *ngIf="reaction">
-  <div class="form-group">
+  <div class="row">
+      <div class="col s12 m4 l2"></div>
     <label for="title">Title</label>
     <input type="text" class="form-control" name="title" id="title" aria-describedby="title" placeholder="Enter Title"
            [(ngModel)]="reaction.title">
@@ -10,6 +11,8 @@
       <p-editor name="content" [(ngModel)]="reaction.content" [style]="{'height':'320px'}"></p-editor>
    </div>
   </div>
-  (Id : {{reaction.id}})
-  <button type="submit" (click)="createNewReaction()" class="btn btn-primary">Create reaction</button>
+  {{reaction.id}}
+  <button type="submit" (click)="createNewReaction()" class="btn-floating btn-large  pink darken-1 pulse">Create reaction</button>
+
+
 </form>
